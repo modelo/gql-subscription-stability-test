@@ -1,0 +1,13 @@
+type Query {
+    testQuery: String
+}
+
+type Subscription {
+  testSub: String
+}
+
+schema {
+  query: Query
+#   mutation: Mutation
+  subscription: Subscription
+}

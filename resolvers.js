@@ -6,7 +6,7 @@ const pubsub = new PubSub();
 module.exports = {
     Query: {
         testQuery: (id) => {
-            console.log(new Date());
+            console.log('query,', new Date());
             return 'test';
         }
     },
@@ -18,6 +18,6 @@ module.exports = {
 };
 
 setInterval(() => {
+    console.log('publish,', new Date());
     pubsub.publish('channel', `{msg: 'publish'}`);
-    console.log('published');
 }, 5000);
